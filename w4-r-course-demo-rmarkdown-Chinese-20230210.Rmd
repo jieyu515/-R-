@@ -1,0 +1,189 @@
+---
+title: "r-workshop-demo-rmarkdown-Chinese"
+author: "吕杰妤（Jieyu Lv）"
+date: "`r Sys.Date()`"
+output:
+  pdf_document:
+    toc: yes
+    includes:
+      in_header: header.tex
+    keep_tex: no
+  ioslides_presentation: default
+  word_document: default
+  slidy_presentation:
+    font_adjustment: -1
+    footer: Created in Rmarkdown
+  html_document: default
+---
+
+
+# 什么是rmarkdown?   
+使用Rmarkdown相比于Rscript有什么好处？  
+
+
+R Markdown is easy enough to use that a little experience with each of the coding frameworks will give you sufficient flexibility to create reports in different formats with widely varying appearances.
+
+You won’t find a report-generating system nearly as powerful and easy-to-use as R Markdown in any other statistical software.
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# 设置工作路径，这样的设置方式会使所有的R版块都在这个路径下运行
+# 相比于setwd()而言
+
+library(knitr)
+opts_knit$set(root.dir = "E:/A-CourseR/R2020-2021-2-workshop-postgraduate/R2020-2021-2-courseproject")
+```
+
+
+
+```{r echo = FALSE, eval= FALSE}
+# clear working environment
+ls() # list all the object
+# to remove all the objects 
+rm(list = ls())
+```
+
+
+
+# 如何进行安装rmarkdown包
+
+```{r}
+# 使用语句安装
+# install.packages("rmarkdown")
+
+```
+
+
+
+***
+
+![rmarkdown documents](../../../Rfigures/rmarkdown.jpg){width=100%}
+
+***
+
+![rmarkdown documents](../../../Rfigures/rmarkdown1.jpg){width=100%}
+
+
+
+
+# slide 幻灯片  
+
+![rmarkdown documents](../../../Rfigures/rmarkdown-pandoc1.jpg){width=100%}
+
+
+![rmarkdown documents](../../../Rfigures/rmarkdown-slide1.jpg){width=100%}
+
+![rmarkdown documents](../../../Rfigures/rmarkdown-slide2.jpg){width=100%}
+
+
+***
+
+![rmarkdown documents](../../../Rfigures/rmarkdown-pandoc.jpg){width=100%}
+
+
+
+
+***
+# 如何在rmarkdown里进行书写。
+#------------------------headers-----------------------------  
+# Things I like  
+## Things I like  
+### Things I like  
+#### Things I like  
+Things I like  
+
+#如何来呈现列表
+-------------------------Lists------------------------------  
+* statistics  
+* R  
+* LaTeX  
+* Word  
+* SPSS  
+
+
+
+#多层级的列表
+
+Things You like
+
+* writing
+  + academic writing
+  + novel writing
+* English
+* paper
+* working
+
+
+***
+
+
+#---------------------emphasizing text-------------------
+
+* statistics
+* **R**
+* *LaTeX*
+* Word
+* SPSS
+
+
+
+Text^superscript^
+Text~subscript~
+
+Text^superscript^
+
+Text~subscript~
+
+
+***
+
+#-----------------------image--------------------------
+
+![Figure_demo](../images/plot.png){width=50%}
+
+
+
+#--------------------------Hyperlinks----------------------
+
+[text_describing_link](url)
+
+[Psychology Experiments](http://jieyucrdexperiment.herokuapp.com)
+
+[R study materials](https://www.bilibili.com/video/BV1s54y1j7xf?p=1&share_medium=android&share_plat=android&share_source=WEIXIN&share_tag=s_i&timestamp=1620463439&unique_k=NBXsl4)
+
+
+
+# Chunks options  
+## 1
+```{r}
+getwd()
+
+```
+## 2
+```{r echo = TRUE, eval = TRUE}
+getwd()
+```
+
+## 3
+```{r echo = FALSE, eval = TRUE}
+getwd()
+```
+
+## 4
+```{r echo = TRUE, eval = FALSE}
+getwd()
+````
+
+
+***
+![rmarkdown documents](../../../Rfigures/rmarkdown-chunk1.jpg){width=100%}
+![rmarkdown documents](../../../Rfigures/rmarkdown-chunk2.jpg){width=100%}
+![rmarkdown documents](../../../Rfigures/rmarkdown-chunk3.jpg){width=100%}
+![rmarkdown documents](../../../Rfigures/rmarkdown-chunk4.jpg){width=100%}
+![rmarkdown documents](../../../Rfigures/rmarkdown-chunk5.jpg){width=100%}
+
+
+
